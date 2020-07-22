@@ -18,22 +18,10 @@ public class ChatForm {
     }
 
     public String getMessage(){
-        if(messageEffect.equals("shout")){
-            return message.toUpperCase();
-        }else if(messageEffect.equals("whisper")){
-            return message.toLowerCase();
-        }
-
         return message;
     }
 
     public String getUserName(){
-        if(messageEffect.equals("shout")){
-            return userName.toUpperCase();
-        }else if(messageEffect.equals("whisper")){
-            return userName.toLowerCase();
-        }
-
         return userName;
     }
 

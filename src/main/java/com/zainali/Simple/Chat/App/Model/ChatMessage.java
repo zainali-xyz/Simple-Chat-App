@@ -6,11 +6,6 @@ public class ChatMessage {
     private String userName;
     private String message;
 
-    public ChatMessage(String userName, String message){
-        this.userName = userName;
-        this.message = message;
-    }
-
     public void setUserName(String userName){
         this.userName = userName;
     }

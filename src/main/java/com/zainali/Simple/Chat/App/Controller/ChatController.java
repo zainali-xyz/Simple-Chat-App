@@ -28,8 +28,7 @@ public class ChatController {
 
     @PostMapping
     public String addChat(@ModelAttribute("newChat") ChatForm chatForm, Model model) {
-        ChatMessage chat = new ChatMessage(chatForm.getUserName(), chatForm.getMessage());
-        messageService.addMessage(chat);
+        messageService.addMessage(chatForm);
         model.addAttribute("chats", messageService.getMessages());
         model.addAttribute("messageCount", messageService.messageCount());
         chatForm.setMessage("");
