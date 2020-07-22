@@ -1,4 +1,4 @@
-package com.zainali.Simple.Chat.App;
+package com.zainali.Simple.Chat.App.Model;
 
 public class ChatForm {
     private String message;

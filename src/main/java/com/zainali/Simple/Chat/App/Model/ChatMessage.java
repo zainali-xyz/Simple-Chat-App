@@ -1,4 +1,4 @@
-package com.zainali.Simple.Chat.App;
+package com.zainali.Simple.Chat.App.Model;
 
 import com.sun.jdi.request.StepRequest;
 
