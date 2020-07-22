@@ -17,6 +17,7 @@ public class ChatController {
     @GetMapping("/chat")
     public String getChat(@ModelAttribute("newChat") ChatForm newChat, Model model){
         model.addAttribute("chats", this.messageService.getMessages());
+        model.addAttribute("messageCount", messageService.messageCount());
         return "chat";
     }
 
@@ -25,6 +26,7 @@ public class ChatController {
         ChatMessage chat = new ChatMessage(chatForm.getUserName(), chatForm.getMessage());
         messageService.addMessage(chat);
         model.addAttribute("chats", messageService.getMessages());
+        model.addAttribute("messageCount", messageService.messageCount());
         chatForm.setMessage("");
         chatForm.setUserName("");
         return "chat";

@@ -23,4 +23,8 @@ public class MessageService {
         return new ArrayList<>(this.messages);
     }
 
+    public int messageCount(){
+        return messages.size();
+    }
+
 }
