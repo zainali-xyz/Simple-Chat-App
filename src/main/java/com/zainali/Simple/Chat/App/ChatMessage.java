@@ -3,8 +3,8 @@ package com.zainali.Simple.Chat.App;
 import com.sun.jdi.request.StepRequest;
 
 public class ChatMessage {
-    String userName;
-    String message;
+    private String userName;
+    private String message;
 
     public ChatMessage(String userName, String message){
         this.userName = userName;

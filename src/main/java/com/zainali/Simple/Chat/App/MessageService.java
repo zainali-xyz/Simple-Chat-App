@@ -1,11 +1,14 @@
 package com.zainali.Simple.Chat.App;
 
+import org.springframework.stereotype.Service;
+
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class MessageService {
-    List<ChatMessage> messages;
+    private List<ChatMessage> messages;
 
     @PostConstruct
     public void postConstruct(){
