@@ -80,24 +80,23 @@
                     <input type="text" class="form-control" id="messageText" placeholder="Enter your message" th:field="*{message}" required>
                 </div>
 
-                <!--
                 <h5 class="mb-3">Message Effects</h5>
 
                 <div class="d-block my-3">
                     <div class="custom-control custom-radio">
-                        <input th:field="*{messageEffect}" id="normal" name="messageType" type="radio" class="custom-control-input" checked required>
+                        <input th:field="*{messageEffect}" value="normal" id="normal" name="messageType" type="radio" class="custom-control-input" checked required>
                         <label class="custom-control-label" for="normal">Normal</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input th:field="*{messageEffect}" id="shout" name="messageType" type="radio" class="custom-control-input" required>
+                        <input th:field="*{messageEffect}" value="shout" id="shout" name="messageType" type="radio" class="custom-control-input" required>
                         <label class="custom-control-label" for="shout">Shout</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input th:field="*{messageEffect}" id="whispher" name="messageType" type="radio" class="custom-control-input" required>
-                        <label class="custom-control-label" for="whispher">Whispher</label>
+                        <input th:field="*{messageEffect}" value="whisper" id="whisper" name="messageType" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="whisper">Whisper</label>
                     </div>
                 </div>
-                -->
+
 
                 <hr class="mb-4">
 
