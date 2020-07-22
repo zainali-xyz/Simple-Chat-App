@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -64,14 +64,14 @@
         </div>
         <div class="col-md-8 order-md-1">
             <h4 class="mb-3">Submit a Chat</h4>
-            <form class="needs-validation" novalidate>
+            <form class="needs-validation" action="#" action="@{'/chat'}" method="post" th:object="${newMessage}">
                 <div class="mb-3">
                     <label for="username">Username</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">@</span>
                         </div>
-                        <input type="text" class="form-control" id="username" placeholder="Username" required>
+                        <input type="text" class="form-control" id="username" placeholder="Username" th:field="*{userName}" required>
                         <div class="invalid-feedback" style="width: 100%;">
                             Your username is required.
                         </div>
@@ -80,22 +80,22 @@
 
                 <div class="form-group">
                     <label for="messageText">Message Text</label>
-                    <input type="text" class="form-control" id="messageText" placeholder="Enter your message" required>
+                    <input type="text" class="form-control" id="messageText" placeholder="Enter your message" th:field="*{text}" required>
                 </div>
 
                 <h5 class="mb-3">Message Effects</h5>
 
                 <div class="d-block my-3">
                     <div class="custom-control custom-radio">
-                        <input id="normal" name="messageType" type="radio" class="custom-control-input" checked required>
+                        <input th:field="*{messageEffect}" id="normal" name="messageType" type="radio" class="custom-control-input" checked required>
                         <label class="custom-control-label" for="normal">Normal</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input id="shout" name="messageType" type="radio" class="custom-control-input" required>
+                        <input th:field="*{messageEffect}" id="shout" name="messageType" type="radio" class="custom-control-input" required>
                         <label class="custom-control-label" for="shout">Shout</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input id="whispher" name="messageType" type="radio" class="custom-control-input" required>
+                        <input th:field="*{messageEffect}" id="whispher" name="messageType" type="radio" class="custom-control-input" required>
                         <label class="custom-control-label" for="whispher">Whispher</label>
                     </div>
                 </div>
