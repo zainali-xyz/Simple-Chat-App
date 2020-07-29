@@ -4,30 +4,22 @@ import com.sun.jdi.request.StepRequest;
 
 public class ChatMessage {
     private String userName;
-    private String messageText;
-    private Integer messageid;
+    private String message;
 
     public void setUserName(String userName){
         this.userName = userName;
     }
 
-    public void setMessageText(String messageText){
-        this.messageText = messageText;
+    public void setMessage(String message){
+        this.message = message;
     }
 
     public String getUserName(){
         return userName;
     }
 
-    public String getMessageText(){
-        return messageText;
+    public String getMessage(){
+        return message;
     }
 
-    public Integer getMessageid() {
-        return messageid;
-    }
-
-    public void setMessageid(Integer messageid) {
-        this.messageid = messageid;
-    }
 }
