@@ -5,6 +5,7 @@ import com.sun.jdi.request.StepRequest;
 public class ChatMessage {
     private String userName;
     private String message;
+    private Integer messageid;
 
     public void setUserName(String userName){
         this.userName = userName;
