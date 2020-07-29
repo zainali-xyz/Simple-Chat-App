@@ -55,7 +55,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<!-- Disabled security dependency to allow non logged-in users access
+
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
@@ -65,7 +65,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-		-->
+
 	</dependencies>
 
 	<build>
