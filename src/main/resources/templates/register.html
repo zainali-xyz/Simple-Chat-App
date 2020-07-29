@@ -1,10 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Zain Ali">
+    <title>Register | Chat App</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/floating-labels/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+    </style>
+
+    <link href="../static/css/authStyle.css" rel="stylesheet">
+
 </head>
 <body>
+<form class="form-signin">
+    <div class="text-center mb-4">
+        <img class="mb-4" src="https://i0.wp.com/zainali.xyz/wp-content/uploads/2019/01/Z_Ali_Intials_Final.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+    </div>
 
+    <div class="form-label-group">
+        <input type="text" id="username" class="form-control" placeholder="Username" required autofocus>
+        <label for="username">Username</label>
+    </div>
+
+    <div class="form-label-group">
+        <input type="text" id="firstname" class="form-control" placeholder="First Name" required>
+        <label for="firstname">First Name</label>
+    </div>
+
+    <div class="form-label-group">
+        <input type="text" id="lastname" class="form-control" placeholder="Last Name" required>
+        <label for="lastname">Last Name</label>
+    </div>
+
+    <div class="form-label-group">
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <label for="inputPassword">Password</label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+
+    <br>
+
+    <label><a href="login.html">Back to Login</a></label>
+
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2020 Zain Ali</p>
+    <ul class="list-inline text-center">
+        <li class="list-inline-item"><a href="https://zainali.xyz/">About Me</a></li>
+        <li class="list-inline-item"><a href="https://github.com/zainali-xyz">GitHub</a></li>
+        <li class="list-inline-item"><a href="https://www.linkedin.com/in/zainali-xyz/">LinkedIn</a></li>
+    </ul>
+</form>
 </body>
 </html>
