@@ -1,12 +1,12 @@
 package com.zainali.Simple.Chat.App.Model;
 
 public class User {
-    Integer userid;
-    String username;
-    String VARCHAR;
-    String password;
-    String firstname;
-    String lastname;
+    private Integer userid;
+    private String username;
+    private String VARCHAR;
+    private String password;
+    private String firstname;
+    private String lastname;
 
     public Integer getUserid() {
         return userid;
