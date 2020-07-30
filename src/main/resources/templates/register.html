@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,29 +34,29 @@
 
 </head>
 <body>
-<form class="form-signin">
+<form class="form-signin" action="#" th:object="${newUser}" method="POST" th:action="@{'/register'}">
     <div class="text-center mb-4">
         <img class="mb-4" src="https://i0.wp.com/zainali.xyz/wp-content/uploads/2019/01/Z_Ali_Intials_Final.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Register</h1>
     </div>
 
     <div class="form-label-group">
-        <input type="text" id="username" class="form-control" placeholder="Username" required autofocus>
+        <input type="text" id="username" class="form-control" placeholder="Username" th:field="*{username}" required autofocus>
         <label for="username">Username</label>
     </div>
 
     <div class="form-label-group">
-        <input type="text" id="firstname" class="form-control" placeholder="First Name" required>
+        <input type="text" id="firstname" class="form-control" placeholder="First Name" th:field="*{firstname}" required>
         <label for="firstname">First Name</label>
     </div>
 
     <div class="form-label-group">
-        <input type="text" id="lastname" class="form-control" placeholder="Last Name" required>
+        <input type="text" id="lastname" class="form-control" placeholder="Last Name" th:field="*{lastname}" required>
         <label for="lastname">Last Name</label>
     </div>
 
     <div class="form-label-group">
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" th:field="*{password}" required>
         <label for="inputPassword">Password</label>
     </div>
 
