@@ -1,4 +1,4 @@
-package com.zainali.Simple.Chat.App.Service;
+package com.zainali.Simple.Chat.App.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

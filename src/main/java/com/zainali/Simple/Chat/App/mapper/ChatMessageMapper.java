@@ -1,6 +1,6 @@
-package com.zainali.Simple.Chat.App.Mapper;
+package com.zainali.Simple.Chat.App.mapper;
 
-import com.zainali.Simple.Chat.App.Model.ChatMessage;
+import com.zainali.Simple.Chat.App.model.ChatMessage;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;

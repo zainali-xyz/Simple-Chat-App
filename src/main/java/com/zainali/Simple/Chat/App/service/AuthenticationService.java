@@ -1,16 +1,14 @@
-package com.zainali.Simple.Chat.App.Service;
+package com.zainali.Simple.Chat.App.service;
 
-import com.zainali.Simple.Chat.App.Mapper.UserMapper;
-import com.zainali.Simple.Chat.App.Model.User;
+import com.zainali.Simple.Chat.App.mapper.UserMapper;
+import com.zainali.Simple.Chat.App.model.User;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Service;
 
-import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.Base64;
 
 @Service
 public class AuthenticationService implements AuthenticationProvider {

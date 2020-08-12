@@ -1,9 +1,7 @@
-package com.zainali.Simple.Chat.App.Service;
+package com.zainali.Simple.Chat.App.service;
 
-import com.zainali.Simple.Chat.App.Mapper.UserMapper;
-import com.zainali.Simple.Chat.App.Model.User;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.zainali.Simple.Chat.App.mapper.UserMapper;
+import com.zainali.Simple.Chat.App.model.User;
 import org.springframework.stereotype.Service;
 
 import java.security.SecureRandom;
@@ -30,7 +28,7 @@ public class UserService {
         random.nextBytes(salt);
         String encodedSalt = Base64.getEncoder().encodeToString(salt);
         String hashedPassword = hashService.getHashedValue(user.getPassword(), encodedSalt);
-        return userMapper.insert(new User(null, user.getUsername(), encodedSalt, hashedPassword, user.getFirstname(), user.getLastname()));
+        return userMapper.insert(new User(null, user.getUsername(), encodedSalt, hashedPassword, user.getFirstName(), user.getLastName()));
     }
 
     public User getUser(String username) {

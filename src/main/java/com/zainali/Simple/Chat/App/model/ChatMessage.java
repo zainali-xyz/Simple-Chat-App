@@ -1,6 +1,4 @@
-package com.zainali.Simple.Chat.App.Model;
-
-import com.sun.jdi.request.StepRequest;
+package com.zainali.Simple.Chat.App.model;
 
 public class ChatMessage {
     private String userName;

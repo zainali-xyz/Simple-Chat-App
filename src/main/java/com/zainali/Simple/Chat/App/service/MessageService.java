@@ -1,7 +1,7 @@
-package com.zainali.Simple.Chat.App.Service;
+package com.zainali.Simple.Chat.App.service;
 
-import com.zainali.Simple.Chat.App.Model.ChatForm;
-import com.zainali.Simple.Chat.App.Model.ChatMessage;
+import com.zainali.Simple.Chat.App.model.ChatForm;
+import com.zainali.Simple.Chat.App.model.ChatMessage;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;

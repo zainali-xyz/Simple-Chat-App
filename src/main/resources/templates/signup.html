@@ -30,33 +30,32 @@
 
     </style>
 
-    <link href="../static/css/authStyle.css" rel="stylesheet">
-
+    <link th:href="@{/css/authStyle.css}" rel="stylesheet">
 </head>
 <body>
-<form class="form-signin" action="#" th:object="${newUser}" method="POST" th:action="@{'/register'}">
+<form class="form-signin" action="#"  method="POST" th:action="@{'/signup'}">
     <div class="text-center mb-4">
         <img class="mb-4" src="https://i0.wp.com/zainali.xyz/wp-content/uploads/2019/01/Z_Ali_Intials_Final.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Register</h1>
     </div>
 
     <div class="form-label-group">
-        <input type="text" id="username" class="form-control" placeholder="Username" th:field="*{username}" required autofocus>
-        <label for="username">Username</label>
+        <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+        <label for="inputUsername">Username</label>
     </div>
 
     <div class="form-label-group">
-        <input type="text" id="firstname" class="form-control" placeholder="First Name" th:field="*{firstname}" required>
-        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="inputFirstname" class="form-control" placeholder="First Name" required>
+        <label for="inputFirstname">First Name</label>
     </div>
 
     <div class="form-label-group">
-        <input type="text" id="lastname" class="form-control" placeholder="Last Name" th:field="*{lastname}" required>
-        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" id="inputLastname" class="form-control" placeholder="Last Name" required>
+        <label for="inputLastname">Last Name</label>
     </div>
 
     <div class="form-label-group">
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" th:field="*{password}" required>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <label for="inputPassword">Password</label>
     </div>
 
@@ -64,7 +63,7 @@
 
     <br>
 
-    <label><a href="login.html">Back to Login</a></label>
+    <label><a href="@{/login.html}">Back to Login</a></label>
 
     <p class="mt-5 mb-3 text-muted text-center">&copy; 2020 Zain Ali</p>
     <ul class="list-inline text-center">

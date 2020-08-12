@@ -1,4 +1,4 @@
-package com.zainali.Simple.Chat.App.Controller;
+package com.zainali.Simple.Chat.App.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

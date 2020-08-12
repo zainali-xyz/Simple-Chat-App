@@ -1,8 +1,7 @@
-package com.zainali.Simple.Chat.App.Controller;
+package com.zainali.Simple.Chat.App.controller;
 
-import com.zainali.Simple.Chat.App.Model.ChatForm;
-import com.zainali.Simple.Chat.App.Model.ChatMessage;
-import com.zainali.Simple.Chat.App.Service.MessageService;
+import com.zainali.Simple.Chat.App.model.ChatForm;
+import com.zainali.Simple.Chat.App.service.MessageService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
