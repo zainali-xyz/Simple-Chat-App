@@ -4,22 +4,19 @@ import com.zainali.Simple.Chat.App.model.ChatForm;
 import com.zainali.Simple.Chat.App.model.ChatMessage;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class MessageService {
-    private List<ChatMessage> messages;
+    private List<String> messages;
 
-    @PostConstruct
-    public void postConstruct(){
+    public MessageService(){
         this.messages = new ArrayList<>();
     }
 
     public void addMessage(ChatForm chatForm){
         ChatMessage chat = new ChatMessage();
-        chat.setUserName(chatForm.getUserName());
         if(chatForm.getMessageEffect().equals("shout")){
             chat.setMessage(chatForm.getMessage().toUpperCase());
         }else if(chatForm.getMessageEffect().equals("whisper")){
@@ -28,10 +25,10 @@ public class MessageService {
             chat.setMessage(chatForm.getMessage());
         }
 
-        messages.add(chat);
+        messages.add(chat.getMessage());
     }
 
-    public List<ChatMessage> getMessages() {
+    public List<String> getMessages() {
         return new ArrayList<>(this.messages);
     }
 

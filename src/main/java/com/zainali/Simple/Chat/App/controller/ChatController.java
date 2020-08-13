@@ -31,7 +31,7 @@ public class ChatController {
         model.addAttribute("chats", messageService.getMessages());
         model.addAttribute("messageCount", messageService.messageCount());
         chatForm.setMessage("");
-        chatForm.setUserName("");
+        //chatForm.setUserName("");
         return "chat";
     }
 
