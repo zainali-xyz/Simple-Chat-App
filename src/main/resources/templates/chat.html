@@ -52,8 +52,8 @@
             <ul class="list-group mb-3">
                 <li th:each="chat: ${chats}" class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
-                        <!-- <h6 th:text="${chat.userName}" class="my-0">User</h6> -->
-                        <small th:text="${chats}" class="text-muted">Message</small>
+                        <h6 th:text="${chat.userName}" class="my-0">User</h6>
+                        <small th:text="${chat.message}" class="text-muted">Message</small>
                     </div>
                 </li>
             </ul>

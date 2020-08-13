@@ -2,6 +2,7 @@ package com.zainali.Simple.Chat.App.controller;
 
 import com.zainali.Simple.Chat.App.model.ChatForm;
 import com.zainali.Simple.Chat.App.service.MessageService;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,12 +27,12 @@ public class ChatController {
     }
 
     @PostMapping
-    public String addChat(@ModelAttribute("newChat") ChatForm chatForm, Model model) {
+    public String addChat(@ModelAttribute("newChat") ChatForm chatForm, Model model, Authentication authentication){
+        chatForm.setUserName(authentication.getName());
         messageService.addMessage(chatForm);
         model.addAttribute("chats", messageService.getMessages());
         model.addAttribute("messageCount", messageService.messageCount());
         chatForm.setMessage("");
-        //chatForm.setUserName("");
         return "chat";
     }
 
